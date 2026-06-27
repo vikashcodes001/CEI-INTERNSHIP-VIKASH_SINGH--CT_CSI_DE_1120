@@ -1,5 +1,3 @@
--- Superstore Sales Data Analysis Queries
-
 -- 1. Total number of records in the dataset
 SELECT COUNT(*) AS total_records FROM sales;
 
@@ -111,7 +109,7 @@ GROUP BY sub_category, category
 ORDER BY total_profit ASC
 LIMIT 5;
 
--- 15. Monthly sales and profit trends (chronological order)
+-- 15. Monthly sales and profit trends
 SELECT 
     strftime('%Y-%m', order_date) AS order_month,
     ROUND(SUM(sales), 2) AS total_sales,
@@ -134,7 +132,7 @@ GROUP BY customer_id, customer_name, segment
 ORDER BY total_spend DESC
 LIMIT 10;
 
--- 17. Find duplicate transactions (same Order ID and Product ID in multiple lines)
+-- 17. Find duplicate transactions
 SELECT 
     order_id,
     product_id,
@@ -146,7 +144,7 @@ HAVING COUNT(*) > 1
 ORDER BY line_occurrences DESC
 LIMIT 10;
 
--- 18. Validation: Check for null or empty values in critical columns
+-- 18.Check for null or empty values in critical columns
 SELECT 
     SUM(CASE WHEN row_id IS NULL THEN 1 ELSE 0 END) AS null_row_ids,
     SUM(CASE WHEN order_id IS NULL OR order_id = '' THEN 1 ELSE 0 END) AS empty_order_ids,
@@ -157,7 +155,7 @@ SELECT
     SUM(CASE WHEN profit IS NULL THEN 1 ELSE 0 END) AS null_profits
 FROM sales;
 
--- 19. Validation: Check for invalid sales or quantity values (values <= 0)
+-- 19.Check for invalid sales or quantity values (values <= 0)
 SELECT 
     SUM(CASE WHEN sales <= 0 THEN 1 ELSE 0 END) AS zero_or_negative_sales,
     SUM(CASE WHEN quantity <= 0 THEN 1 ELSE 0 END) AS zero_or_negative_quantity
