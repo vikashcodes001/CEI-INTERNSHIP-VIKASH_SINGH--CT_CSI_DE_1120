@@ -1,0 +1,57 @@
+Spark Session created successfully.
+
+--- DataFrame Schema ---
+root
+ |-- transaction_id: string (nullable = true)
+ |-- customer_id: integer (nullable = true)
+ |-- category: string (nullable = true)
+ |-- amount: double (nullable = true)
+ |-- quantity: integer (nullable = true)
+ |-- city: string (nullable = true)
+ |-- transaction_date: string (nullable = true)
+
+
+--- Transformed DataFrame ---
++--------------+-----------+-----------+------------+--------+-------------+----------------+-----------+------------+
+|transaction_id|customer_id|   category|total_amount|quantity|     location|transaction_date|total_price|is_expensive|
++--------------+-----------+-----------+------------+--------+-------------+----------------+-----------+------------+
+|          T107|        107|Electronics|       650.0|       1|San Francisco|      2025-01-21|      650.0|         Yes|
+|          T101|        101|Electronics|      1200.5|       2|San Francisco|      2025-01-15|     2401.0|         Yes|
+|          T106|        106|   Clothing|        89.9|       2|     New York|      2025-01-20|      179.8|          No|
+|          T102|        102|   Clothing|        45.0|       1|     New York|      2025-01-16|       45.0|          No|
+|          T104|        104|      Books|       15.99|       1|San Francisco|      2025-01-18|      15.99|          No|
+|          T105|        105|       Home|       250.0|       1|        Tokyo|      2025-01-19|      250.0|          No|
+|          T103|        103|Electronics|         0.0|       3|       London|      2025-01-17|        0.0|          No|
+|          T108|        108|      Books|         0.0|       1|       London|      2025-01-22|        0.0|          No|
++--------------+-----------+-----------+------------+--------+-------------+----------------+-----------+------------+
+
+
+--- Filtered Electronics Orders ---
++--------------+-----------+------------+-------------+
+|transaction_id|   category|total_amount|     location|
++--------------+-----------+------------+-------------+
+|          T107|Electronics|       650.0|San Francisco|
+|          T101|Electronics|      1200.5|San Francisco|
++--------------+-----------+------------+-------------+
+
+
+--- Wide Transformation: Category Sales Summary ---
++-----------+--------------------+
+|   category|category_total_sales|
++-----------+--------------------+
+|Electronics|              1850.5|
+|   Clothing|               134.9|
+|      Books|               15.99|
+|       Home|               250.0|
++-----------+--------------------+
+
+
+--- Physical Execution Plan ---
+== Physical Plan ==
+*(1) Project [transaction_id#14, category#16, coalesce(nanvl(amount#17, null), 0.0) AS total_amount#24, city#19 AS location#25]
++- *(1) Filter ((isnotnull(category#16) AND (category#16 = Electronics)) AND (coalesce(nanvl(amount#17, null), 0.0) > 100.0))
+   +- *(1) ColumnarToRow
+      +- FileScan parquet [transaction_id#14,category#16,amount#17,city#19] Batched: true, DataFilters: [isnotnull(category#16), (category#16 = Electronics), (coalesce(nanvl(amount#17, null), 0.0) > 10..., Format: Parquet, Location: InMemoryFileIndex(1 paths)[file:/C:/Users/vs332/Downloads/INTERNSHIP/Week6/data/raw_parquet], PartitionFilters: [], PushedFilters: [IsNotNull(category), EqualTo(category,Electronics)], ReadSchema: struct<transaction_id:string,category:string,amount:double,city:string>
+
+
+Processing completed successfully.

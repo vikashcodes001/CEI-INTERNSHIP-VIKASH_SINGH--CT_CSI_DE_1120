@@ -1,0 +1,2 @@
+transaction_id,customer_id,category,amount,quantity,city,transaction_date
+T107,107,Electronics,650.0,1,San Francisco,2025-01-21
