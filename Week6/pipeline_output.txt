@@ -1,0 +1,97 @@
+Step 1: Initializing Spark Session
+Spark Version: 4.2.0 | Master: local[*]
+
+Step 2: Generating Synthetic Dataset (100,000 records)
+Writing raw CSV dataset to: C:\Users\vs332\Downloads\INTERNSHIP\Week6\data\raw\transactions.csv
+Writing raw Parquet dataset to: C:\Users\vs332\Downloads\INTERNSHIP\Week6\data\raw\transactions.parquet
+
+Step 3: Reading Data & Schema Verification
+Read performance (100,000 rows):
+  - CSV with inferSchema:     2.4833s
+  - CSV with explicit schema: 0.4469s
+  - Parquet (schema-on-read): 0.5695s
+
+Parquet Schema:
+root
+ |-- transaction_id: string (nullable = true)
+ |-- customer_id: integer (nullable = true)
+ |-- timestamp_str: string (nullable = true)
+ |-- category: string (nullable = true)
+ |-- amount: double (nullable = true)
+ |-- quantity: integer (nullable = true)
+ |-- payment_method: string (nullable = true)
+ |-- city: string (nullable = true)
+
+
+Step 4: Data Cleaning & Transformations
+Initial null value counts:
++------+--------+--------------+
+|amount|quantity|payment_method|
++------+--------+--------------+
+|  4893|    4925|          9945|
++------+--------+--------------+
+
+Transformed DataFrame Sample:
++--------------+-----------+--------+------------+--------+--------------+-------------+-------------------+----------+-------------------+-------------+-------+--------+
+|transaction_id|customer_id|category|total_amount|quantity|payment_method|location     |timestamp          |unit_price|order_size_category|is_high_value|tx_year|tx_month|
++--------------+-----------+--------+------------+--------+--------------+-------------+-------------------+----------+-------------------+-------------+-------+--------+
+|TXN-1000001   |6883       |Beauty  |64.96       |4       |Debit Card    |New York     |2025-10-20 20:51:30|16.24     |Medium             |false        |2025   |10      |
+|TXN-1000002   |5842       |Sports  |97.81       |8       |Unknown       |London       |2025-08-28 20:55:27|12.23     |Bulk               |false        |2025   |8       |
+|TXN-1000003   |8909       |Books   |272.36      |7       |PayPal        |Sydney       |2025-04-03 01:09:42|38.91     |Medium             |false        |2025   |4       |
+|TXN-1000004   |3501       |Beauty  |495.84      |1       |Credit Card   |San Francisco|2025-03-17 21:49:23|495.84    |Small              |false        |2025   |3       |
+|TXN-1000005   |7368       |Beauty  |207.34      |4       |Credit Card   |Berlin       |2025-08-22 13:41:56|51.84     |Medium             |false        |2025   |8       |
++--------------+-----------+--------+------------+--------+--------------+-------------+-------------------+----------+-------------------+-------------+-------+--------+
+only showing top 5 rows
+
+Step 5: Aggregations & Shuffle Transformations
+Narrow Filter Result (SF orders > $100): 12,768 rows
+
+--- Category Revenue Summary (GroupBy Shuffle) ---
++--------------+-------------------+------------------+----------+---------------+
+|category      |order_size_category|total_transactions|revenue   |avg_order_value|
++--------------+-------------------+------------------+----------+---------------+
+|Clothing      |Medium             |7118              |5112666.69|718.27         |
+|Home & Kitchen|Medium             |7171              |5096468.8 |710.71         |
+|Electronics   |Medium             |7047              |5069254.0 |719.35         |
+|Beauty        |Medium             |7040              |5041727.93|716.15         |
+|Books         |Medium             |6967              |4967744.37|713.04         |
++--------------+-------------------+------------------+----------+---------------+
+only showing top 5 rows
+
+--- Customer Tier Revenue (Join Shuffle) ---
++---------------+-------------+
+|membership_tier|total_revenue|
++---------------+-------------+
+|  Tier_Platinum|1.838599164E7|
+|      Tier_Gold|1.775790934E7|
+|    Tier_Silver| 1.77473889E7|
+|    Tier_Bronze|1.759968021E7|
++---------------+-------------+
+
+
+Step 6: Catalyst Physical Plan Analysis
+Parquet Query Physical Plan (Predicate & Projection Pushdown):
+== Physical Plan ==
+* Filter (3)
++- * ColumnarToRow (2)
+   +- Scan parquet  (1)
+
+(1) Scan parquet 
+Output [3]: [transaction_id#266, category#269, amount#270]
+Batched: true
+Location: InMemoryFileIndex [file:/C:/Users/vs332/Downloads/INTERNSHIP/Week6/data/raw/transactions.parquet]
+PushedFilters: [IsNotNull(category), EqualTo(category,Electronics)]
+ReadSchema: struct<transaction_id:string,category:string,amount:double>
+
+
+Step 7: Benchmarking CSV vs Parquet Performance
+Storage Footprint -> CSV: 6.93 MB | Parquet: 2.42 MB (Compression: 2.87x)
+Query Filter Speed (10,579 matching rows):
+  - CSV Query Time:     1.6769s
+  - Parquet Query Time: 0.3045s (Speedup: 5.51x faster)
+
+Step 8: Exporting Pipeline Output
+Saving partitioned Parquet data to: C:\Users\vs332\Downloads\INTERNSHIP\Week6\data\output\transformed_transactions_parquet
+Saving coalesced CSV data to: C:\Users\vs332\Downloads\INTERNSHIP\Week6\data\output\transformed_transactions_csv
+
+Pipeline execution completed successfully.
