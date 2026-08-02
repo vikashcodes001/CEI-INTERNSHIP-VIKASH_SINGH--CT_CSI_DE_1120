@@ -1,2 +1,0 @@
-transaction_id,customer_id,category,total_amount,quantity,location,transaction_date,total_price,is_expensive
-T101,101,Electronics,1200.5,2,San Francisco,2025-01-15,2401.0,Yes

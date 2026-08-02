@@ -1,2 +1,0 @@
-transaction_id,customer_id,category,total_amount,quantity,location,transaction_date,total_price,is_expensive
-T108,108,Books,0.0,1,London,2025-01-22,0.0,No

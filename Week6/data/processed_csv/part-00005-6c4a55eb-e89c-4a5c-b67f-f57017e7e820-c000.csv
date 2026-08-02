@@ -1,2 +1,0 @@
-transaction_id,customer_id,category,total_amount,quantity,location,transaction_date,total_price,is_expensive
-T105,105,Home,250.0,1,Tokyo,2025-01-19,250.0,No

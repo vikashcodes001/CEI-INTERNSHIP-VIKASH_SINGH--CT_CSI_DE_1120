@@ -1,2 +1,0 @@
-transaction_id,customer_id,category,amount,quantity,city,transaction_date
-T105,105,Home,250.0,1,Tokyo,2025-01-19

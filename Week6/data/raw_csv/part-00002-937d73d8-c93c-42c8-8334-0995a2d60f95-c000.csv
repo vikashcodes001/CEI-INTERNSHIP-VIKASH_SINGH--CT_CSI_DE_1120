@@ -1,2 +1,0 @@
-transaction_id,customer_id,category,amount,quantity,city,transaction_date
-T102,102,Clothing,45.0,1,New York,2025-01-16
