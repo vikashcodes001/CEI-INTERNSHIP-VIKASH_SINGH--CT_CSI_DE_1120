@@ -1,0 +1,2 @@
+transaction_id,customer_id,category,total_amount,quantity,location,transaction_date,total_price,is_expensive
+T102,102,Clothing,45.0,1,New York,2025-01-16,45.0,No
