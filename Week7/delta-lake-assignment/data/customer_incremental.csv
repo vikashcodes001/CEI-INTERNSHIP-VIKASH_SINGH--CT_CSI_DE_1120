@@ -1,0 +1,51 @@
+Customer_ID,Customer_Name,Segment,Country,City,State,Postal_Code,Region,Total_Sales,Total_Orders,Credit_Score,Is_Active,Effective_Date,End_Date,Record_Version,Updated_At
+AA-10315,Alex Avila,Consumer,United States,San Francisco,California,94105,West,6014.31,13,717,True,2026-01-01,9999-12-31,2,2026-08-02T10:00:00
+AA-10375,Allen Armold,Consumer,United States,San Francisco,California,94105,West,1507.14,17,794,True,2026-01-01,9999-12-31,2,2026-08-02T10:00:00
+AA-10480,Andrew Allen,Consumer,United States,San Francisco,California,94105,West,2241.26,14,707,True,2026-01-01,9999-12-31,2,2026-08-02T10:00:00
+AA-10645,Anna Andreadi,Consumer,United States,San Francisco,California,94105,West,5537.68,20,629,True,2026-01-01,9999-12-31,2,2026-08-02T10:00:00
+AB-10015,Aaron Bergman,Consumer,United States,San Francisco,California,94105,West,1336.91,8,721,True,2026-01-01,9999-12-31,2,2026-08-02T10:00:00
+AB-10060,Adam Bellavance,Home Office,United States,San Francisco,California,94105,West,8206.37,20,686,True,2026-01-01,9999-12-31,2,2026-08-02T10:00:00
+AB-10105,Adrian Barton,Consumer,United States,San Francisco,California,94105,West,14924.32,22,803,True,2026-01-01,9999-12-31,2,2026-08-02T10:00:00
+AB-10150,Aimee Bixby,Consumer,United States,San Francisco,California,94105,West,1417.46,14,635,True,2026-01-01,9999-12-31,2,2026-08-02T10:00:00
+AB-10165,Alan Barnes,Consumer,United States,San Francisco,California,94105,West,1564.59,16,717,True,2026-01-01,9999-12-31,2,2026-08-02T10:00:00
+AB-10255,Alejandro Ballentine,Home Office,United States,San Francisco,California,94105,West,1365.28,16,736,True,2026-01-01,9999-12-31,2,2026-08-02T10:00:00
+AB-10600,Ann Blume,Corporate,United States,San Francisco,California,94105,West,1966.61,10,825,True,2026-01-01,9999-12-31,2,2026-08-02T10:00:00
+AC-10420,Alyssa Crouse,Corporate,United States,San Francisco,California,94105,West,1376.55,7,829,True,2026-01-01,9999-12-31,2,2026-08-02T10:00:00
+AC-10450,Amy Cox,Consumer,United States,San Francisco,California,94105,West,5978.6,11,689,True,2026-01-01,9999-12-31,2,2026-08-02T10:00:00
+AC-10615,Ann Chong,Corporate,United States,San Francisco,California,94105,West,2988.44,20,817,True,2026-01-01,9999-12-31,2,2026-08-02T10:00:00
+AC-10660,Anna Chung,Consumer,United States,San Francisco,California,94105,West,1108.07,8,702,True,2026-01-01,9999-12-31,2,2026-08-02T10:00:00
+AD-10180,Alan Dominguez,Home Office,United States,San Francisco,California,94105,West,6557.63,14,731,True,2026-01-01,9999-12-31,2,2026-08-02T10:00:00
+AF-10870,Art Ferguson,Consumer,United States,San Francisco,California,94105,West,2503.66,18,714,True,2026-01-01,9999-12-31,2,2026-08-02T10:00:00
+AF-10885,Art Foster,Consumer,United States,San Francisco,California,94105,West,1312.31,9,718,True,2026-01-01,9999-12-31,2,2026-08-02T10:00:00
+AG-10270,Alejandro Grove,Consumer,United States,San Francisco,California,94105,West,3033.65,16,766,True,2026-01-01,9999-12-31,2,2026-08-02T10:00:00
+AG-10300,Aleksandra Gannaway,Corporate,United States,San Francisco,California,94105,West,818.3,7,745,True,2026-01-01,9999-12-31,2,2026-08-02T10:00:00
+AG-10330,Alex Grayson,Consumer,United States,San Francisco,California,94105,West,1111.72,11,764,True,2026-01-01,9999-12-31,2,2026-08-02T10:00:00
+AG-10390,Allen Goldenen,Consumer,United States,San Francisco,California,94105,West,651.69,10,667,True,2026-01-01,9999-12-31,2,2026-08-02T10:00:00
+AG-10495,Andrew Gjertsen,Corporate,United States,San Francisco,California,94105,West,2807.61,23,616,True,2026-01-01,9999-12-31,2,2026-08-02T10:00:00
+AG-10525,Andy Gerbode,Corporate,United States,San Francisco,California,94105,West,1905.79,11,702,True,2026-01-01,9999-12-31,2,2026-08-02T10:00:00
+AG-10675,Anna Gayman,Consumer,United States,San Francisco,California,94105,West,3939.79,17,850,True,2026-01-01,9999-12-31,2,2026-08-02T10:00:00
+AG-10765,Anthony Garverick,Home Office,United States,San Francisco,California,94105,West,621.33,7,772,True,2026-01-01,9999-12-31,2,2026-08-02T10:00:00
+AG-10900,Arthur Gainer,Consumer,United States,San Francisco,California,94105,West,4961.55,23,652,True,2026-01-01,9999-12-31,2,2026-08-02T10:00:00
+AH-10030,Aaron Hawkins,Corporate,United States,San Francisco,California,94105,West,2195.45,13,744,True,2026-01-01,9999-12-31,2,2026-08-02T10:00:00
+AH-10075,Adam Hart,Corporate,United States,San Francisco,California,94105,West,3701.09,22,806,True,2026-01-01,9999-12-31,2,2026-08-02T10:00:00
+AH-10120,Adrian Hane,Home Office,United States,San Francisco,California,94105,West,2186.26,18,802,True,2026-01-01,9999-12-31,2,2026-08-02T10:00:00
+NEW-CUST-1001,Incremental Customer 1,Consumer,United States,Austin,Texas,78701,South,1325.5,3,751,True,2026-08-02,9999-12-31,1,2026-08-02T10:00:00
+NEW-CUST-1002,Incremental Customer 2,Corporate,United States,Austin,Texas,78701,South,1401.0,3,752,True,2026-08-02,9999-12-31,1,2026-08-02T10:00:00
+NEW-CUST-1003,Incremental Customer 3,Consumer,United States,Austin,Texas,78701,South,1476.5,3,753,True,2026-08-02,9999-12-31,1,2026-08-02T10:00:00
+NEW-CUST-1004,Incremental Customer 4,Corporate,United States,Austin,Texas,78701,South,1552.0,3,754,True,2026-08-02,9999-12-31,1,2026-08-02T10:00:00
+NEW-CUST-1005,Incremental Customer 5,Consumer,United States,Austin,Texas,78701,South,1627.5,3,755,True,2026-08-02,9999-12-31,1,2026-08-02T10:00:00
+NEW-CUST-1006,Incremental Customer 6,Corporate,United States,Austin,Texas,78701,South,1703.0,3,756,True,2026-08-02,9999-12-31,1,2026-08-02T10:00:00
+NEW-CUST-1007,Incremental Customer 7,Consumer,United States,Austin,Texas,78701,South,1778.5,3,757,True,2026-08-02,9999-12-31,1,2026-08-02T10:00:00
+NEW-CUST-1008,Incremental Customer 8,Corporate,United States,Austin,Texas,78701,South,1854.0,3,758,True,2026-08-02,9999-12-31,1,2026-08-02T10:00:00
+NEW-CUST-1009,Incremental Customer 9,Consumer,United States,Austin,Texas,78701,South,1929.5,3,759,True,2026-08-02,9999-12-31,1,2026-08-02T10:00:00
+NEW-CUST-1010,Incremental Customer 10,Corporate,United States,Austin,Texas,78701,South,2005.0,3,760,True,2026-08-02,9999-12-31,1,2026-08-02T10:00:00
+NEW-CUST-1011,Incremental Customer 11,Consumer,United States,Austin,Texas,78701,South,2080.5,3,761,True,2026-08-02,9999-12-31,1,2026-08-02T10:00:00
+NEW-CUST-1012,Incremental Customer 12,Corporate,United States,Austin,Texas,78701,South,2156.0,3,762,True,2026-08-02,9999-12-31,1,2026-08-02T10:00:00
+NEW-CUST-1013,Incremental Customer 13,Consumer,United States,Austin,Texas,78701,South,2231.5,3,763,True,2026-08-02,9999-12-31,1,2026-08-02T10:00:00
+NEW-CUST-1014,Incremental Customer 14,Corporate,United States,Austin,Texas,78701,South,2307.0,3,764,True,2026-08-02,9999-12-31,1,2026-08-02T10:00:00
+NEW-CUST-1015,Incremental Customer 15,Consumer,United States,Austin,Texas,78701,South,2382.5,3,765,True,2026-08-02,9999-12-31,1,2026-08-02T10:00:00
+AA-10315,Alex Avila,Consumer,United States,San Francisco,California,94105,West,6014.31,13,717,True,2026-01-01,9999-12-31,2,2026-08-02T10:00:00
+AA-10375,Allen Armold,Consumer,United States,San Francisco,California,94105,West,1507.14,17,794,True,2026-01-01,9999-12-31,2,2026-08-02T10:00:00
+AA-10480,Andrew Allen,Consumer,United States,San Francisco,California,94105,West,2241.26,14,707,True,2026-01-01,9999-12-31,2,2026-08-02T10:00:00
+AA-10645,Anna Andreadi,Consumer,United States,San Francisco,California,94105,West,5537.68,20,629,True,2026-01-01,9999-12-31,2,2026-08-02T10:00:00
+AB-10015,Aaron Bergman,Consumer,United States,San Francisco,California,94105,West,1336.91,8,721,True,2026-01-01,9999-12-31,2,2026-08-02T10:00:00
