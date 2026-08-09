@@ -1,0 +1,19 @@
+product_id,product_name,category,price,cost
+101,Wireless Noise-Canceling Headphones,Electronics,199.99,110.0
+102,Mechanical Gaming Keyboard,Electronics,89.5,45.0
+103,Ultra-Wide Monitor 34-Inch,Electronics,449.0,280.0
+104,Usb-C Fast Charging Cable,Electronics,14.99,3.5
+106,Cotton Graphic T-Shirt,Apparel,24.99,8.0
+107,Slim-Fit Denim Jeans,Apparel,59.99,22.0
+108,All-Weather Hooded Jacket,Apparel,89.0,38.0
+109,Running Performance Sneakers,Apparel,110.0,50.0
+110,Stainless Steel Travel Mug,General,19.99,6.0
+111,Non-Stick Ceramic Frying Pan,Home & Kitchen,34.5,14.0
+112,Automatic Drip Coffee Maker,Home & Kitchen,79.99,35.0
+113,Ergonomic Memory Foam Pillow,Home & Kitchen,29.99,10.0
+114,Data Science In Python Handbook,Books,45.0,18.0
+116,Clean Code: Modern Principles,Books,39.99,15.0
+117,Adjustable Dumbbell Set 50Lbs,Fitness,180.0,95.0
+118,Non-Slip Yoga Mat,Fitness,29.99,9.0
+119,Resistance Bands Set,Fitness,18.5,5.0
+120,Hydrating Facial Moisturizer,Beauty,22.0,7.0

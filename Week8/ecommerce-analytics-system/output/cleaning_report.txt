@@ -1,0 +1,8 @@
+DATA CLEANING & INTEGRITY REPORT
+check_referential_integrity(): 1 order_items reference non-existent order_ids.
+check_referential_integrity(): 19 order_items reference non-existent product_ids.
+validate_emails(): Found 17 customers with invalid/missing emails.
+clean_customers(): Raw 205 rows -> Cleaned 194 rows.
+clean_products(): Raw 21 rows -> Cleaned 18 rows.
+clean_orders(): Raw 604 rows -> Cleaned 535 rows.
+clean_order_items(): Raw 1443 rows -> Cleaned 1060 rows.
