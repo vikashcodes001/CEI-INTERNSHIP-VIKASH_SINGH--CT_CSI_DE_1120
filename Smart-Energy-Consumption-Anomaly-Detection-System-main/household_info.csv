@@ -1,0 +1,11 @@
+household_id,city,house_type,avg_daily_consumption
+H001,Jaipur,Independent,8
+H002,Kolkata,Independent,10
+H003,Jaipur,Villa,12
+H004,Jaipur,Apartment,15
+H005,Kolkata,Apartment,7
+H006,Mumbai,Studio,9
+H007,Pune,Studio,11
+H008,Delhi,Studio,14
+H009,Pune,Independent,6
+H010,Hyderabad,Independent,13

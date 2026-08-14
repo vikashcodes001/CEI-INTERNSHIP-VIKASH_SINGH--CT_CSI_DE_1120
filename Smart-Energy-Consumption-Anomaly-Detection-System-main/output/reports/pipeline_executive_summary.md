@@ -1,0 +1,38 @@
+# Smart Energy Consumption Pipeline Report
+Generated At: 2026-08-09 09:24:06 UTC
+
+## 1. System Performance
+
+| Metric | Measured | Target | Status |
+| --- | --- | --- | --- |
+| Data Completeness | 98.57% | >= 98.0% | PASS |
+| SMA Forecast MAPE | 11.73% | <= 15.0% | PASS |
+| Pipeline Latency | 0.27s | < 15.0 min | PASS |
+
+## 2. Ingestion & Processing Summary
+
+- Bronze Ingested: 1400 records (10 households)
+- Silver Curated: 1400 records (Imputed: 20)
+- Gold Aggregates: Hourly (1400), Daily (60), Monthly (10), Alerts (27)
+
+## 3. Anomaly Summary
+
+- Total Anomalies Flagged: 27
+- Spikes: 27
+- Extended Zero Outages: 0
+- Pattern Deviations: 0
+
+### Recent Anomalies Sample
+| Meter ID | Household ID | Timestamp | Reading (kWh) | Expected (kWh) | Anomaly Type | Severity |
+| --- | --- | --- | --- | --- | --- | --- |
+| M009 | H009 | 2026-04-01 05:00:00 | 2.16 | 0.65 | SPIKE | MEDIUM |
+| M001 | H001 | 2026-04-01 06:00:00 | 4.82 | 1.50 | SPIKE | MEDIUM |
+| M004 | H004 | 2026-04-01 06:00:00 | 2.60 | 0.83 | SPIKE | MEDIUM |
+| M007 | H007 | 2026-04-01 06:00:00 | 5.29 | 1.62 | SPIKE | MEDIUM |
+| M008 | H008 | 2026-04-01 06:00:00 | 1.72 | 0.49 | SPIKE | MEDIUM |
+| M010 | H010 | 2026-04-01 06:00:00 | 1.80 | 0.45 | SPIKE | MEDIUM |
+| M009 | H009 | 2026-04-01 12:00:00 | 14.17 | 2.56 | SPIKE | HIGH |
+| M009 | H009 | 2026-04-01 13:00:00 | 11.26 | 3.18 | SPIKE | MEDIUM |
+| M002 | H002 | 2026-04-01 14:00:00 | 3.53 | 1.01 | SPIKE | MEDIUM |
+| M007 | H007 | 2026-04-01 17:00:00 | 25.96 | 4.24 | SPIKE | HIGH |
+
