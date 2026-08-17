@@ -72,16 +72,6 @@ Smart-Energy-Consumption-Anomaly-Detection-System-main/
 
 ---
 
-## Usage
-
-Run the interactive notebook:
-
-```bash
-jupyter notebook notebooks/smart_meter_analytics.ipynb
-```
-
----
-
 ## Performance & Metrics
 
 | Metric | Target KPI | Achieved | Status |
